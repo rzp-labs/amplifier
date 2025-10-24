@@ -1,3 +1,9 @@
+---
+description: Review code changes systematically with quality checks and testing
+category: quality-assurance
+allowed-tools: Bash, Read, Glob
+---
+
 # Review and test code changes
 
 Everything below assumes you are in the repo root directory, change there if needed before running.

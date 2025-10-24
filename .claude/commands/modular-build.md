@@ -1,3 +1,9 @@
+---
+description: Build modular components following "bricks & studs" philosophy from ask to contract to implementation
+category: modular-development
+allowed-tools: Task, Read, Write, Edit, Bash, Glob
+---
+
 # /modular-build
 
 **Purpose:** One command to go from a natural‑language **ask** → **Contract & Spec** → **Plan** → **Generate** → **Review**.

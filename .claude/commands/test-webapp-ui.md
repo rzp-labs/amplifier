@@ -1,3 +1,10 @@
+---
+description: UI testing workflow for web applications using Playwright
+category: testing
+allowed-tools: Bash, Read, Write, mcp__plugin_testing-suite_playwright-server__browser_*
+argument-hint: URL or description of what to test, optional focus area
+---
+
 ## Usage
 
 `/test-webapp-ui <url_or_description> [test-focus]`

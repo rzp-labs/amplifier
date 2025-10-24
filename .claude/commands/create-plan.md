@@ -1,3 +1,9 @@
+---
+description: Create detailed implementation plan for junior developers
+category: planning
+allowed-tools: Write, Read, Glob
+---
+
 # Create a plan from current context
 
 Create a plan in @ai_working/tmp that can be used by a junior developer to implement the changes needed to complete the task. The plan should be detailed enough to guide them through the implementation process, including any necessary steps, considerations, and references to relevant documentation or code files.

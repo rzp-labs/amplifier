@@ -1,3 +1,9 @@
+---
+description: Execute implementation plan in phased batches with review checkpoints
+category: execution
+allowed-tools: Read, Write, Edit, Bash, Glob
+---
+
 # Execute a plan
 
 Everything below assumes you are in the repo root directory, change there if needed before running.

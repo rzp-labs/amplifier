@@ -1,3 +1,10 @@
+---
+description: Load implementation philosophy documents before starting work
+category: setup
+allowed-tools: Read, Bash
+argument-hint: Optional additional guidance or context for the session
+---
+
 ## Usage
 
 `/prime <ADDITIONAL_GUIDANCE>`

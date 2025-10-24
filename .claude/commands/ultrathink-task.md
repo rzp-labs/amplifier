@@ -1,3 +1,10 @@
+---
+description: Deep task analysis before implementation - break down, explore options, recommend approach
+category: analysis
+allowed-tools: Read, Glob, Bash
+argument-hint: Description of the task to analyze
+---
+
 ## Usage
 
 `/ultrathink-task <TASK_DESCRIPTION>`

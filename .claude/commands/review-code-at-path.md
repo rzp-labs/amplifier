@@ -1,3 +1,10 @@
+---
+description: Review code at specific path for philosophy compliance and quality
+category: quality-assurance
+allowed-tools: Read, Glob, Bash
+argument-hint: Path to code file or directory to review
+---
+
 # Review and test code changes
 
 Everything below assumes you are in the repo root directory, change there if needed before running.
