@@ -1,0 +1,20 @@
+# Phase 2: Non-Code Files Index
+# Files to create/update (using file crawling technique)
+
+## Orchestrator Submodule (NEW - to be created)
+[x] orchestrator/README.md
+[x] orchestrator/docs/setup.md
+[x] orchestrator/docs/workflows.md
+[x] orchestrator/docs/architecture.md
+[x] orchestrator/docs/adding_workflows.md
+[x] orchestrator/docs/hooks_and_skills.md
+[x] orchestrator/pyproject.toml
+[x] orchestrator/package.json
+[x] orchestrator/Makefile
+[x] orchestrator/.gitignore
+[x] orchestrator/LICENSE
+[x] orchestrator/CHANGELOG.md
+
+## Amplifier Parent (UPDATES to existing)
+[x] README.md
+[x] .gitmodules

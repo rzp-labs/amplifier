@@ -411,7 +411,7 @@ Located in `orchestrator/`, this standalone submodule automates tactical tasks t
 
 - **Support triage** - Automated ticket investigation and priority assessment
 - **Linear integration** - Connect to existing workflows via linear-cli
-- **AI-powered analysis** - Validity and severity assessment using amplifier agents
+- **AI-powered analysis** - Validity and severity assessment using Claude Code agents
 - **Metrics collection** - Track performance for optimization
 
 **Quick start**:
