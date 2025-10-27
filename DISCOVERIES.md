@@ -2,6 +2,88 @@
 
 This file documents non-obvious problems, solutions, and patterns discovered during development. Make sure these are regularly reviewed and updated, removing outdated entries or those replaced by better practices or code or tools, updating those where the best practice has evolved.
 
+## Python Submodule Virtual Environment Independence (2025-10-26)
+
+### Issue
+
+When a Python project is a git submodule within the Amplifier workspace, running `make check` and `make test` from the submodule directory was using the parent workspace's virtual environment instead of the submodule's own `.venv`.
+
+### Root Cause
+
+1. **Environment variable inheritance**: The `VIRTUAL_ENV` environment variable from the parent Amplifier workspace was being inherited by subprocesses
+2. **uv default behavior**: `uv run` was respecting the inherited `VIRTUAL_ENV` and using the parent's `.venv` instead of the local project's `.venv`
+3. **Missing dev dependencies**: The submodule's Makefile used `uv sync` without `--all-extras`, so dev dependencies (pytest, pyright, ruff) weren't installed
+4. **No environment isolation**: Makefile didn't explicitly unset inherited environment variables
+
+### Solution
+
+Updated the submodule's Makefile to enforce local `.venv` usage:
+
+**Makefile changes:**
+```makefile
+# Ensure we use the local .venv, not parent workspace
+SHELL := /bin/bash
+export VIRTUAL_ENV :=
+export UV_PROJECT_ENVIRONMENT := .venv
+
+# Install dependencies
+install:
+	uv sync --all-extras
+```
+
+**Key fixes:**
+1. `export VIRTUAL_ENV :=` - Unsets inherited VIRTUAL_ENV from parent
+2. `export UV_PROJECT_ENVIRONMENT := .venv` - Forces uv to use local .venv
+3. `uv sync --all-extras` - Ensures dev dependencies are installed
+
+### Validation
+
+From the submodule directory:
+```bash
+# Install dependencies locally
+make install
+
+# Run checks using local .venv
+make check  # Uses .venv/lib/python3.*/site-packages/
+
+# Run tests using local .venv
+make test   # All tests pass with local dependencies
+```
+
+### Key Learnings
+
+1. **Submodules need environment isolation**: Python projects as submodules must explicitly unset parent environment variables
+2. **uv respects VIRTUAL_ENV**: The `uv run` command will use `VIRTUAL_ENV` if set, even when running from a different project directory
+3. **Explicit is better**: Setting `UV_PROJECT_ENVIRONMENT` makes uv use the local .venv unambiguously
+4. **Dev dependencies must be explicit**: `uv sync --all-extras` is needed to install `[project.optional-dependencies]` from pyproject.toml
+5. **Validate from submodule directory**: All make commands (`check`, `test`, etc.) must work when run from the submodule's own directory
+
+### Prevention
+
+For any Python project that lives as a submodule within Amplifier:
+
+1. Add environment isolation to Makefile:
+   ```makefile
+   export VIRTUAL_ENV :=
+   export UV_PROJECT_ENVIRONMENT := .venv
+   ```
+
+2. Install all extras by default:
+   ```makefile
+   install:
+       uv sync --all-extras
+   ```
+
+3. Test from the submodule directory:
+   ```bash
+   cd <submodule>
+   make install
+   make check
+   make test
+   ```
+
+4. Ensure `.gitignore` includes `.venv/` and `uv.lock` is committed
+
 ## DevContainer Setup: Using Official Features Instead of Custom Scripts (2025-10-22)
 
 ### Issue

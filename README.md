@@ -401,6 +401,30 @@ Further details on how to run the benchmark can be found in [tests/terminal_benc
 
 ---
 
+## 📦 Submodules
+
+### Orchestrator
+
+**AI-powered orchestrator for tactical product development work**
+
+Located in `orchestrator/`, this standalone submodule automates tactical tasks that typically distract teams from strategic work:
+
+- **Support triage** - Automated ticket investigation and priority assessment
+- **Linear integration** - Connect to existing workflows via linear-cli
+- **AI-powered analysis** - Validity and severity assessment using amplifier agents
+- **Metrics collection** - Track performance for optimization
+
+**Quick start**:
+```bash
+cd orchestrator
+uv sync
+uv run orchestrator triage <ticket-id>
+```
+
+**[See orchestrator documentation →](orchestrator/README.md)**
+
+---
+
 ## Disclaimer
 
 > [!IMPORTANT] > **This is an experimental system. _We break things frequently_.**
