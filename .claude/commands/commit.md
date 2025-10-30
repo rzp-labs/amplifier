@@ -29,6 +29,7 @@ Or with options:
    - Run lint/format checks if available
    - Run build verification if build script exists
    - Update documentation if generation script exists
+   - Consider submodules if present
 2. Checks which files are staged with `git status`
 3. If 0 files are staged, automatically adds all modified and new files with `git add`
 4. Performs a `git diff` to understand what changes are being committed

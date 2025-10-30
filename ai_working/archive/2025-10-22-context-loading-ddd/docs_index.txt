@@ -1,0 +1,30 @@
+# Documentation Files to Update (Phase 2)
+
+## Part A: Request Envelope Models Documentation
+
+[x] amplifier-dev/docs/REQUEST_ENVELOPE_MODELS.md
+[x] amplifier-dev/docs/specs/provider/REQUEST_ENVELOPE_V1.md
+[x] amplifier-dev/docs/specs/provider/PROVIDER_MODULE_PROTOCOL.md
+
+## Part B: Context Loading Documentation
+
+[x] amplifier-dev/docs/CONTEXT_LOADING.md
+[x] amplifier-dev/docs/PROFILE_AUTHORING.md
+[x] amplifier-dev/docs/USER_ONBOARDING.md (brief mention of context loading)
+[x] amplifier-dev/docs/AMPLIFIER_CONTEXT_GUIDE.md (brief mention)
+[x] amplifier-dev/docs/README.md (add link to CONTEXT_LOADING)
+
+## Bundled Context Files (New)
+
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/context/README.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/context/AGENTS.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/context/DISCOVERIES.md
+
+## Profile Updates (Add System Instructions)
+
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/foundation.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/base.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/dev.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/production.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/test.md
+[x] amplifier-dev/amplifier-app-cli/amplifier_app_cli/data/profiles/full.md

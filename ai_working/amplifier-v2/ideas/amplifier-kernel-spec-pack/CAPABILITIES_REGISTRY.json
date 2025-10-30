@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://amplifier/spec/capabilities-registry.v1.json",
+  "version": "1.0.0",
+  "namespaces": {
+    "fs": {
+      "read": "Read local filesystem paths",
+      "write": "Write local filesystem paths",
+      "temp": "Create temporary files"
+    },
+    "net": {
+      "fetch": "Perform outbound HTTP/HTTPS requests",
+      "bind": "Bind a local TCP/UDP port"
+    },
+    "kv": {
+      "get": "Lookup small values by key",
+      "set": "Store small values by key"
+    },
+    "secrets": {
+      "read": "Access named secret values"
+    },
+    "exec": {
+      "spawn": "Launch child processes"
+    }
+  }
+}

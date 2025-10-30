@@ -41,6 +41,7 @@ Answer these questions:
 
 Explore the codebase:
 
+- Leverage @docs/document_driven_development/core_concepts/file_crawling.md techniques
 - Use Glob to find relevant files
 - Use Grep to search for related code
 - Understand current architecture
@@ -185,15 +186,10 @@ Consider spawning agents for help:
 **zen-architect** - For complex architectural decisions:
 
 ```
-Task zen-architect: "Design approach for [feature], considering
+Task @agent-zen-architect: "Design approach for [feature], considering
 IMPLEMENTATION_PHILOSOPHY and MODULAR_DESIGN_PHILOSOPHY"
-```
 
-**Explore agent** - For codebase reconnaissance:
-
-```
-Task Explore: "Find all code related to [topic], understand
-current patterns and architecture"
+Task @agent-zen-architect: "Review proposed plan for architectural soundness and alignment with design philosophies"
 ```
 
 ---

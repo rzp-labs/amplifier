@@ -25,6 +25,7 @@ dependencies = [
     "rapidfuzz>=3.13.0",
     "requests>=2.32.4",
     "tiktoken>=0.11.0",
+    "toml>=0.10.2",
     "tqdm>=4.67.1",
     "yt-dlp>=2025.9.26",
 ]
@@ -46,7 +47,21 @@ dev = [
     "pytest-cov>=6.1.1",
     "pytest-mock>=3.14.0",
     "ruff>=0.11.10",
+    "tomli-w>=1.2.0",
     "twine>=6.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["amplifier-dev"]
+norecursedirs = [
+    "ai_working",
+    ".venv",
+    "node_modules",
+    ".git",
+    "build",
+    "dist",
+    ".data",
+    "toolkit/examples",  # Exclude example tools (require separate installation)
 ]
 
 [tool.pyright]

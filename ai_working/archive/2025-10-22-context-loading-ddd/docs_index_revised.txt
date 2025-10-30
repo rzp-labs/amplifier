@@ -1,0 +1,23 @@
+# Documentation to Update (Revised for Final Architecture)
+
+## Already Created (Need Review/Update)
+
+[x] docs/CONTEXT_LOADING.md - UPDATED
+[x] docs/REQUEST_ENVELOPE_MODELS.md - UPDATED
+[x] docs/PROFILE_AUTHORING.md - REVIEWED
+[x] [ ] amplifier-app-cli/data/context/README.md - REVIEW: Already created
+[x] [ ] amplifier-app-cli/data/context/AGENTS.md - REVIEW: Already created
+[x] [ ] amplifier-app-cli/data/context/DISCOVERIES.md - REVIEW: Already created
+[x] [ ] amplifier-app-cli/data/profiles/*.md - REVIEW: All 6 profiles updated
+
+## New Documentation Needed
+
+[x] docs/MENTION_PROCESSING.md - CREATED
+[x] docs/USER_ONBOARDING.md - UPDATE: Add @mention usage in chat
+[x] docs/AMPLIFIER_CONTEXT_GUIDE.md - UPDATE: Add @mention architecture section
+[x] docs/README.md - UPDATE: Link to @mention docs
+
+## Spec Updates
+
+[x] [ ] docs/specs/provider/REQUEST_ENVELOPE_V1.md - REVIEW: Already updated
+[x] [ ] docs/specs/provider/PROVIDER_MODULE_PROTOCOL.md - REVIEW: Already updated

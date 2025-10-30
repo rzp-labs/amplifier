@@ -1,0 +1,3 @@
+{"id":"e1","ts":1.0,"event":"session:start","component":"kernel","session_id":"S"}
+{"id":"e2","ts":31.0,"event":"module:invoke","component":"kernel","module":"slow.tool","status":"error","duration_ms":30000,"error":{"code":"timeout","message":"exceeded 30s"},"data":{"op":"do"},"session_id":"S"}
+{"id":"e3","ts":31.1,"event":"session:end","component":"kernel","session_id":"S"}

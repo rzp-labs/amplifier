@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://amplifier/spec/events-registry.v1.json",
+  "version": "1.0.0",
+  "events": {
+    "session:start": {
+      "required": [
+        "session_id",
+        "data.plan"
+      ]
+    },
+    "session:fork": {
+      "required": [
+        "session_id",
+        "data.parent"
+      ]
+    },
+    "session:end": {
+      "required": [
+        "session_id"
+      ]
+    },
+    "mount:add": {
+      "required": [
+        "data.path",
+        "data.module"
+      ]
+    },
+    "mount:remove": {
+      "required": [
+        "data.path"
+      ]
+    },
+    "hook:register": {
+      "required": [
+        "data.event"
+      ]
+    },
+    "context:get": {
+      "required": []
+    },
+    "context:set": {
+      "required": [
+        "data.key"
+      ]
+    },
+    "context:pre_compact": {
+      "required": []
+    },
+    "context:post_compact": {
+      "required": [
+        "data.delta_bytes"
+      ]
+    },
+    "module:invoke": {
+      "required": [
+        "module",
+        "data.op",
+        "status",
+        "duration_ms"
+      ]
+    },
+    "policy:decision": {
+      "required": [
+        "data.capability",
+        "status"
+      ]
+    },
+    "artifact:write": {
+      "required": [
+        "data.uri",
+        "data.bytes"
+      ]
+    },
+    "artifact:read": {
+      "required": [
+        "data.uri",
+        "status"
+      ]
+    }
+  }
+}

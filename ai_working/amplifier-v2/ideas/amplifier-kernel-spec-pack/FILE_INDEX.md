@@ -1,0 +1,14 @@
+# FILE_INDEX.md
+- `AMPLIFIER_AS_LINUX_KERNEL.md` — kernel-as-OS metaphor and responsibilities
+- `KERNEL_PHILOSOPHY.md` — first principles and tenets
+- `PROTOCOLS.md` — descriptors, protocol ops, event/error/plan schemas
+- `KERNEL_API.md` — syscall signatures, concurrency, determinism, timeouts
+- `EVENTS_REGISTRY.json` — canonical events with per-event required fields
+- `CAPABILITIES_REGISTRY.json` — seed capabilities and namespaces
+- `CONFORMANCE_CLI.md` — runnable conformance harness spec
+- `SECURITY_MODEL.md` — threat model and controls
+- `TESTING_AND_CONFORMANCE.md` — golden harness and repro guidance
+- `PACKAGING_AND_DISTRIBUTION.md` — package split and examples
+- `NON_GOALS.md` — explicit boundaries
+- `IMPLEMENTATION_GUIDE.md` — concise implementation notes
+- `TRANSCRIPTS/success.jsonl` and `TRANSCRIPTS/failure.jsonl` — golden logs
